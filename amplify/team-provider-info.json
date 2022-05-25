@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-vacationrental-staging-34517-authRole",
+      "UnauthRoleArn": "arn:aws:iam::159429861638:role/amplify-vacationrental-staging-34517-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::159429861638:role/amplify-vacationrental-staging-34517-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-vacationrental-staging-34517-deployment",
+      "UnauthRoleName": "amplify-vacationrental-staging-34517-unauthRole",
+      "StackName": "amplify-vacationrental-staging-34517",
+      "StackId": "arn:aws:cloudformation:us-east-1:159429861638:stack/amplify-vacationrental-staging-34517/701c9560-d401-11ec-8a43-0eaa0ad1cf2b",
+      "AmplifyAppId": "d2org7cqyvge0r"
+    }
+  }
+}
