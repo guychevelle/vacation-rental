@@ -81,21 +81,6 @@ export default function MyIcon(props) {
         MyIcon: {
           paths: [
             {
-              d: "M14.5 0C12.76 0 11.09 0.81 10 2.09C8.91 0.81 7.24 0 5.5 0C2.42 0 0 2.42 0 5.5C0 9.28 3.4 12.36 8.55 17.04L10 18.35L11.45 17.03C16.6 12.36 20 9.28 20 5.5C20 2.42 17.58 0 14.5 0ZM10.1 15.55L10 15.65L9.9 15.55C5.14 11.24 2 8.39 2 5.5C2 3.5 3.5 2 5.5 2C7.04 2 8.54 2.99 9.07 4.36L10.94 4.36C11.46 2.99 12.96 2 14.5 2C16.5 2 18 3.5 18 5.5C18 8.39 14.86 11.24 10.1 15.55Z",
-              fill: "rgba(13,26,38,1)",
-              fillRule: "nonzero",
-              style: { transform: "translate(8.33%, 14.58%)" },
-            },
-          ],
-        },
-      },
-      variantValues: { type: "favorite_border" },
-    },
-    {
-      overrides: {
-        MyIcon: {
-          paths: [
-            {
               d: "M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z",
               fill: "rgba(13,26,38,1)",
               fillRule: "nonzero",
@@ -300,6 +285,21 @@ export default function MyIcon(props) {
         },
       },
       variantValues: { type: "delete" },
+    },
+    {
+      overrides: {
+        MyIcon: {
+          paths: [
+            {
+              d: "M14.5 0C12.76 0 11.09 0.81 10 2.09C8.91 0.81 7.24 0 5.5 0C2.42 0 0 2.42 0 5.5C0 9.28 3.4 12.36 8.55 17.04L10 18.35L11.45 17.03C16.6 12.36 20 9.28 20 5.5C20 2.42 17.58 0 14.5 0ZM10.1 15.55L10 15.65L9.9 15.55C5.14 11.24 2 8.39 2 5.5C2 3.5 3.5 2 5.5 2C7.04 2 8.54 2.99 9.07 4.36L10.94 4.36C11.46 2.99 12.96 2 14.5 2C16.5 2 18 3.5 18 5.5C18 8.39 14.86 11.24 10.1 15.55Z",
+              fill: "rgba(13,26,38,1)",
+              fillRule: "nonzero",
+              style: { transform: "translate(8.33%, 14.58%)" },
+            },
+          ],
+        },
+      },
+      variantValues: { type: "favorite_border" },
     },
   ];
   const overrides = mergeVariantsAndOverrides(

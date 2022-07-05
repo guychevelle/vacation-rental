@@ -1,0 +1,47 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-vacationrental-staging-34517-authRole",
+      "UnauthRoleArn": "arn:aws:iam::159429861638:role/amplify-vacationrental-staging-34517-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::159429861638:role/amplify-vacationrental-staging-34517-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-vacationrental-staging-34517-deployment",
+      "UnauthRoleName": "amplify-vacationrental-staging-34517-unauthRole",
+      "StackName": "amplify-vacationrental-staging-34517",
+      "StackId": "arn:aws:cloudformation:us-east-1:159429861638:stack/amplify-vacationrental-staging-34517/701c9560-d401-11ec-8a43-0eaa0ad1cf2b",
+      "AmplifyAppId": "d2org7cqyvge0r"
+    }
+  },
+  "api": {
+    "vacationrental": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "This is an api key"
+            }
+          },
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ]
+        },
+        "GraphQLAPIIdOutput": "snfnqskk6beahd55eyyuxnjlti",
+        "GraphQLAPIEndpointOutput": "https://lghdwtxubbcqthdo563g3iekuy.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-dmzubpmdzva5rblnb2l4q5eu4i"
+      },
+      "lastPushTimeStamp": "2022-07-05T20:06:45.770Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-vacationrental-staging-34517-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apivacationrental"
+      },
+      "lastPushDirHash": "v0oLynsXJY3FZpEGoVeAhqwVFeQ="
+    }
+  }
+}
