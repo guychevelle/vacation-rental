@@ -7,7 +7,7 @@
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ViewProps } from "@aws-amplify/ui-react";
-export declare type GalleryLogoProps = React.PropsWithChildren<Partial<ViewProps> & {
+export declare type GalleryLogoMobileProps = React.PropsWithChildren<Partial<ViewProps> & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function GalleryLogo(props: GalleryLogoProps): React.ReactElement;
+export default function GalleryLogoMobile(props: GalleryLogoMobileProps): React.ReactElement;

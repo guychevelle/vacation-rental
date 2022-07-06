@@ -11,34 +11,34 @@ import {
   useNavigateAction,
 } from "@aws-amplify/ui-react/internal";
 import { Image, View } from "@aws-amplify/ui-react";
-export default function GalleryLogo(props) {
+export default function GalleryLogoMobile(props) {
   const { overrides, ...rest } = props;
-  const galleryLogoOneOnClick = useNavigateAction({
+  const galleryLogoMobileOneOnClick = useNavigateAction({
     type: "url",
     url: "https://runondemandgallery.com",
   });
   return (
     <View
-      width="350px"
-      height="100px"
+      width="175px"
+      height="50px"
       overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
-      {...getOverrideProps(overrides, "GalleryLogo")}
+      {...getOverrideProps(overrides, "GalleryLogoMobile")}
     >
       <Image
-        width="350px"
-        height="100px"
+        width="175px"
+        height="50px"
         position="absolute"
         top="0px"
-        left="0px"
+        left="2px"
         padding="0px 0px 0px 0px"
-        src="https://gallerypubliccontent-bucket.s3.amazonaws.com/GalleryLogo.png"
+        src="https://gallerypubliccontent-bucket.s3.amazonaws.com/GalleryLogoMobile.png"
         onClick={() => {
-          galleryLogoOneOnClick();
+          galleryLogoMobileOneOnClick();
         }}
-        {...getOverrideProps(overrides, "GalleryLogo 1")}
+        {...getOverrideProps(overrides, "GalleryLogoMobile 1")}
       ></Image>
     </View>
   );

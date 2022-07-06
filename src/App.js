@@ -8,7 +8,7 @@ import '@aws-amplify/ui-react/styles.css'
 // UI Components
 import { RentalCollection } from './ui-components'
 import { GalleryLogo } from './ui-components'
-import { GalleryNavMobile } from './ui-components'
+import { GalleryLogoMobile } from './ui-components'
 
 //  use to determine window size
 import {useEffect, useState} from 'react';
@@ -46,7 +46,7 @@ function AppLandingPage() {
       <div>
         <div>
           <AmplifyProvider>
-            <GalleryNavMobile />
+            <Link><GalleryLogoMobile /></Link>
             <RentalCollection overrides={rentalCollOverrides} />
           </AmplifyProvider>
         </div>

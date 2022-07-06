@@ -6,17 +6,10 @@
 
 /* eslint-disable */
 import React from "react";
-import {
-  getOverrideProps,
-  useNavigateAction,
-} from "@aws-amplify/ui-react/internal";
+import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Image, View } from "@aws-amplify/ui-react";
 export default function GalleryNavMobile(props) {
   const { overrides, ...rest } = props;
-  const galleryLogoSmallOnClick = useNavigateAction({
-    type: "url",
-    url: "https://runondemandgallery.com",
-  });
   return (
     <View
       width="400px"
@@ -34,10 +27,6 @@ export default function GalleryNavMobile(props) {
         top="0px"
         left="10px"
         padding="0px 0px 0px 0px"
-        src="https://gallerypubliccontent-bucket.s3.amazonaws.com/GalleryLogoSmall.png"
-        onClick={() => {
-          galleryLogoSmallOnClick();
-        }}
         {...getOverrideProps(overrides, "GalleryLogoSmall")}
       ></Image>
       <Image
@@ -47,7 +36,6 @@ export default function GalleryNavMobile(props) {
         top="4px"
         left="308px"
         padding="0px 0px 0px 0px"
-        src="https://gallerypubliccontent-bucket.s3.amazonaws.com/MenuHamburger.png"
         {...getOverrideProps(overrides, "MenuHamburger")}
       ></Image>
     </View>
