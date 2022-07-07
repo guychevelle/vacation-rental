@@ -2,7 +2,6 @@ import './App.css';
 import './gallery.css';
 
 import { AmplifyProvider } from '@aws-amplify/ui-react'
-import { Link } from "@aws-amplify/ui-react"
 import '@aws-amplify/ui-react/styles.css'
 
 // UI Components
@@ -46,7 +45,9 @@ function AppLandingPage() {
       <div>
         <div>
           <AmplifyProvider>
-            <Link><GalleryLogoMobile /></Link>
+            div class="link-image">
+              <GalleryLogoMobile />
+            </div>
             <RentalCollection overrides={rentalCollOverrides} />
           </AmplifyProvider>
         </div>
@@ -65,7 +66,9 @@ function AppLandingPage() {
   return (
     <div>
       <AmplifyProvider>
-        <Link><GalleryLogo /></Link>
+        <div class="link-image">
+          <GalleryLogo />
+        </div>
         <RentalCollection overrides={rentalCollOverrides} />
       </AmplifyProvider>
     </div>
