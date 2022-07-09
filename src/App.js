@@ -1,5 +1,5 @@
 import './App.css';
-import './gallery.css';
+import './vacationrental.css';
 
 import { AmplifyProvider } from '@aws-amplify/ui-react'
 import '@aws-amplify/ui-react/styles.css'
@@ -8,6 +8,9 @@ import '@aws-amplify/ui-react/styles.css'
 import { RentalCollection } from './ui-components'
 import { GalleryLogo } from './ui-components'
 import { GalleryLogoMobile } from './ui-components'
+
+//  hamburger menu
+import Sidebar from './Sidebar';
 
 //  use to determine window size
 import {useEffect, useState} from 'react';
@@ -42,10 +45,14 @@ function AppLandingPage() {
     }
 
     return (
-      <div>
+      <div className="App" id="outer-container">
+        <div className="burger-margins">
+          <Sidebar pageWrapId={'page-wrap'}
+                   outerContainerId={'outer-container'} />
+        </div>
         <div>
           <AmplifyProvider>
-            div class="link-image">
+            <div className="link-image">
               <GalleryLogoMobile />
             </div>
             <RentalCollection overrides={rentalCollOverrides} />
@@ -66,7 +73,7 @@ function AppLandingPage() {
   return (
     <div>
       <AmplifyProvider>
-        <div class="link-image">
+        <div className="link-image">
           <GalleryLogo />
         </div>
         <RentalCollection overrides={rentalCollOverrides} />

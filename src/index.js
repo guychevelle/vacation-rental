@@ -4,9 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-//  added as part of tutorial
-import config from './aws-exports'
-import Amplify from 'aws-amplify'
+//  AWS Amplify related
+import Amplify from 'aws-amplify';
+import "@aws-amplify/ui-react/styles.css";
+import {AmplifyProvider} from "@aws-amplify/ui-react";
+import config from './aws-exports';
 
 Amplify.configure(config)
 
