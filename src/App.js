@@ -12,10 +12,17 @@ import { GalleryLogoMobile } from './ui-components'
 //  hamburger menu
 import Sidebar from './Sidebar';
 
+//  navbar (includes burger like menu for mobile)
+import Navbarmenu from './Navbarmenu';
+
+//  router
+import { BrowserRouter } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+
 //  use to determine window size
 import {useEffect, useState} from 'react';
 
-function AppLandingPage() {
+function BurgerLandingPage() {
   //  window size related functionality
   //  from https://bobbyhadz.com/blog/react-get-window-width-height
   const [windowSize, setWindowSize] = useState(getWindowSize());
@@ -78,6 +85,60 @@ function AppLandingPage() {
         </div>
         <RentalCollection overrides={rentalCollOverrides} />
       </AmplifyProvider>
+    </div>
+  );
+}
+
+function AppLandingPage() {
+  //  window size related functionality
+  //  from https://bobbyhadz.com/blog/react-get-window-width-height
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    //  set page <head> meta data
+    document.title = "Gallery: Vacation Rentals";
+    document.querySelector('meta[name="description"]').setAttribute("content", "Collection of image cards with descriptions");
+    document.querySelector('meta[name="keywords"]').setAttribute("content", "react aws amplify");
+
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener('resize', handleWindowResize);
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+
+  function getWindowSize() {
+    const {innerWidth, innerHeight} = window;
+    return {innerWidth, innerHeight};
+  }
+//  end of determine window size functionality
+
+  const rentalCollOverrides = {
+    "RentalCollection": {
+      type: "list"
+    }
+  }
+
+  return (
+    <div>
+      <BrowserRouter>
+        <div>
+          <Navbarmenu />
+        </div>
+        <header>
+        </header>
+        <Routes>
+          <Route path="/" element={<RentalCollection overrides={rentalCollOverrides} />} />
+        </Routes>
+      </BrowserRouter>
+      <footer>
+        <div className="centered">
+          width: {windowSize.innerWidth} height: {windowSize.innerHeight}
+        </div>
+      </footer>
     </div>
   );
 }
