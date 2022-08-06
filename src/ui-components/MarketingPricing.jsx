@@ -13,7 +13,6 @@ export default function MarketingPricing(props) {
   return (
     <Flex
       gap="24px"
-      direction="row"
       width="1440px"
       justifyContent="center"
       alignItems="center"
@@ -26,7 +25,6 @@ export default function MarketingPricing(props) {
     >
       <Flex
         gap="24px"
-        direction="row"
         width="1392px"
         alignItems="flex-start"
         grow="1"
@@ -91,7 +89,6 @@ export default function MarketingPricing(props) {
           <Button
             display="flex"
             gap="0"
-            direction="row"
             justifyContent="center"
             alignItems="center"
             shrink="0"
@@ -116,7 +113,6 @@ export default function MarketingPricing(props) {
           ></Divider>
           <Flex
             gap="16px"
-            direction="row"
             alignItems="flex-start"
             shrink="0"
             alignSelf="stretch"
@@ -184,7 +180,6 @@ export default function MarketingPricing(props) {
           </Flex>
           <Flex
             gap="16px"
-            direction="row"
             alignItems="flex-start"
             shrink="0"
             alignSelf="stretch"
@@ -252,7 +247,6 @@ export default function MarketingPricing(props) {
           </Flex>
           <Flex
             gap="16px"
-            direction="row"
             alignItems="flex-start"
             shrink="0"
             alignSelf="stretch"
@@ -374,7 +368,6 @@ export default function MarketingPricing(props) {
           <Button
             display="flex"
             gap="0"
-            direction="row"
             justifyContent="center"
             alignItems="center"
             shrink="0"
@@ -399,7 +392,6 @@ export default function MarketingPricing(props) {
           ></Divider>
           <Flex
             gap="16px"
-            direction="row"
             alignItems="flex-start"
             shrink="0"
             alignSelf="stretch"
@@ -467,7 +459,6 @@ export default function MarketingPricing(props) {
           </Flex>
           <Flex
             gap="16px"
-            direction="row"
             alignItems="flex-start"
             shrink="0"
             alignSelf="stretch"
@@ -535,7 +526,6 @@ export default function MarketingPricing(props) {
           </Flex>
           <Flex
             gap="16px"
-            direction="row"
             alignItems="flex-start"
             shrink="0"
             alignSelf="stretch"
@@ -657,7 +647,6 @@ export default function MarketingPricing(props) {
           <Button
             display="flex"
             gap="0"
-            direction="row"
             justifyContent="center"
             alignItems="center"
             shrink="0"
@@ -682,7 +671,6 @@ export default function MarketingPricing(props) {
           ></Divider>
           <Flex
             gap="16px"
-            direction="row"
             alignItems="flex-start"
             shrink="0"
             alignSelf="stretch"
@@ -750,7 +738,6 @@ export default function MarketingPricing(props) {
           </Flex>
           <Flex
             gap="16px"
-            direction="row"
             alignItems="flex-start"
             shrink="0"
             alignSelf="stretch"
@@ -818,7 +805,6 @@ export default function MarketingPricing(props) {
           </Flex>
           <Flex
             gap="16px"
-            direction="row"
             alignItems="flex-start"
             shrink="0"
             alignSelf="stretch"

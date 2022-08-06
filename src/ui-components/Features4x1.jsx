@@ -25,7 +25,6 @@ export default function Features4x1(props) {
     >
       <Flex
         gap="24px"
-        direction="row"
         justifyContent="center"
         alignItems="center"
         shrink="0"
@@ -38,7 +37,7 @@ export default function Features4x1(props) {
         <Flex
           gap="16px"
           direction="column"
-          height="161px"
+          width="272px"
           grow="1"
           basis="272px"
           alignSelf="stretch"
@@ -91,7 +90,7 @@ export default function Features4x1(props) {
         <Flex
           gap="16px"
           direction="column"
-          height="161px"
+          width="272px"
           grow="1"
           basis="272px"
           alignSelf="stretch"
@@ -144,7 +143,7 @@ export default function Features4x1(props) {
         <Flex
           gap="16px"
           direction="column"
-          height="161px"
+          width="272px"
           grow="1"
           basis="272px"
           alignSelf="stretch"
@@ -197,7 +196,7 @@ export default function Features4x1(props) {
         <Flex
           gap="16px"
           direction="column"
-          height="161px"
+          width="272px"
           grow="1"
           basis="272px"
           alignSelf="stretch"

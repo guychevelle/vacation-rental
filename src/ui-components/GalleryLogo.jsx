@@ -6,17 +6,10 @@
 
 /* eslint-disable */
 import React from "react";
-import {
-  getOverrideProps,
-  useNavigateAction,
-} from "@aws-amplify/ui-react/internal";
+import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Image, View } from "@aws-amplify/ui-react";
 export default function GalleryLogo(props) {
   const { overrides, ...rest } = props;
-  const galleryLogoOneOnClick = useNavigateAction({
-    type: "url",
-    url: "https://runondemandgallery.com",
-  });
   return (
     <View
       width="350px"
@@ -34,10 +27,6 @@ export default function GalleryLogo(props) {
         top="0px"
         left="0px"
         padding="0px 0px 0px 0px"
-        src="https://gallerypubliccontent-bucket.s3.amazonaws.com/GalleryLogo.png"
-        onClick={() => {
-          galleryLogoOneOnClick();
-        }}
         {...getOverrideProps(overrides, "GalleryLogo 1")}
       ></Image>
     </View>

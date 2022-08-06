@@ -99,7 +99,6 @@ export default function HeroLayout4(props) {
         ></Text>
         <Flex
           gap="8px"
-          direction="row"
           width="fit-content"
           alignItems="flex-start"
           shrink="0"
@@ -126,7 +125,6 @@ export default function HeroLayout4(props) {
           <Button
             display="flex"
             gap="0"
-            direction="row"
             width="fit-content"
             justifyContent="center"
             alignItems="center"

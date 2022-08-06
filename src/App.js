@@ -118,7 +118,8 @@ function AppLandingPage() {
 
   const rentalCollOverrides = {
     "RentalCollection": {
-      type: "list"
+      type: "grid",
+      columns: "2"
     }
   }
 

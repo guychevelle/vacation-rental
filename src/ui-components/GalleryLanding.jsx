@@ -28,7 +28,6 @@ export default function GalleryLanding(props) {
         position="absolute"
         top="14px"
         left="15px"
-        direction="row"
         width="406px"
         height="63px"
         justifyContent="center"

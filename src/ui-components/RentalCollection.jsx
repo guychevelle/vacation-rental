@@ -24,7 +24,8 @@ export default function RentalCollection(props) {
     <Collection
       type="grid"
       searchPlaceholder="Search..."
-      templateColumns="1fr 1fr"
+      itemsPerPage={6}
+      templateColumns="1fr 1fr 1fr"
       autoFlow="row"
       alignItems="stretch"
       justifyContent="stretch"
@@ -37,7 +38,7 @@ export default function RentalCollection(props) {
           rental={item}
           height="auto"
           width="auto"
-          margin="0 4px 0 0"
+          margin="0 0px 0 0"
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}
         ></TallCard>
