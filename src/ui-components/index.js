@@ -36,6 +36,8 @@ export { default as Features4x1 } from "./Features4x1";
 export { default as MarketingPricing } from "./MarketingPricing";
 export { default as ProductDetail } from "./ProductDetail";
 export { default as ContactUs } from "./ContactUs";
+export { default as MyCard } from "./MyCard";
+export { default as MyCardRentalCollection } from "./MyCardRentalCollection";
 export { default as GalleryLanding } from "./GalleryLanding";
 export { default as CommentCard } from "./CommentCard";
 export { default as studioTheme } from "./studioTheme";

@@ -12,8 +12,9 @@ export default function TallCard(props) {
   const { rental, overrides, ...rest } = props;
   return (
     <Flex
-      gap="8px"
+      gap="1px"
       direction="column"
+      width="320px"
       justifyContent="center"
       position="relative"
       padding="0px 0px 0px 0px"
