@@ -1,13 +1,15 @@
 import './App.css';
 import './vacationrental.css';
 
-import { AmplifyProvider } from '@aws-amplify/ui-react'
-import '@aws-amplify/ui-react/styles.css'
+import { AmplifyProvider } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
 
 // UI Components
-import { RentalCollection } from './ui-components'
-import { GalleryLogo } from './ui-components'
-import { GalleryLogoMobile } from './ui-components'
+import { RentalCollection } from './ui-components';
+import { GalleryLogo } from './ui-components';
+import { GalleryLogoMobile } from './ui-components';
+
+import { MyCardRentalCollection } from './ui-components';
 
 //  hamburger menu
 import Sidebar from './Sidebar';
@@ -89,6 +91,7 @@ function BurgerLandingPage() {
   );
 }
 
+
 function AppLandingPage() {
   //  window size related functionality
   //  from https://bobbyhadz.com/blog/react-get-window-width-height
@@ -116,11 +119,27 @@ function AppLandingPage() {
   }
 //  end of determine window size functionality
 
+/*
   const rentalCollOverrides = {
     "RentalCollection": {
-      type: "list"
+      type: "grid",
+      columns: "2",
+      gap: "0px"
     }
   }
+*/
+
+  const mycardrentalCollOverrides = windowSize.innerWidth < 700
+    ?  {
+        "MyCardRentalCollection": {
+           type: "list"
+         }
+       }
+    :  {
+        "MyCardRentalCollection": {
+          type: "grid"
+         }
+       }
 
   return (
     <div>
@@ -130,9 +149,11 @@ function AppLandingPage() {
         </div>
         <header>
         </header>
-        <Routes>
-          <Route path="/" element={<RentalCollection overrides={rentalCollOverrides} />} />
-        </Routes>
+        <div display="flex" justify-content="center" margin="25px">
+          <Routes>
+            <Route path="/" element={<MyCardRentalCollection overrides={mycardrentalCollOverrides} />} />
+          </Routes>
+        </div>
       </BrowserRouter>
       <footer>
         <div className="centered">
@@ -142,6 +163,12 @@ function AppLandingPage() {
     </div>
   );
 }
+
+/*
+        <Routes>
+          <Route path="/" element={<RentalCollection overrides={rentalCollOverrides} />} />
+        </Routes>
+*/
 
 function App() {
   return (

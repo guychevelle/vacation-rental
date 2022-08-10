@@ -25,7 +25,6 @@ export default function Features2x3(props) {
     >
       <Flex
         gap="24px"
-        direction="row"
         justifyContent="center"
         alignItems="center"
         shrink="0"
@@ -59,7 +58,6 @@ export default function Features2x3(props) {
           >
             <Flex
               gap="24px"
-              direction="row"
               alignItems="flex-start"
               shrink="0"
               alignSelf="stretch"
@@ -167,7 +165,6 @@ export default function Features2x3(props) {
           >
             <Flex
               gap="24px"
-              direction="row"
               alignItems="flex-start"
               shrink="0"
               alignSelf="stretch"
@@ -275,7 +272,6 @@ export default function Features2x3(props) {
           >
             <Flex
               gap="24px"
-              direction="row"
               alignItems="flex-start"
               shrink="0"
               alignSelf="stretch"
@@ -395,7 +391,6 @@ export default function Features2x3(props) {
           >
             <Flex
               gap="24px"
-              direction="row"
               alignItems="flex-start"
               shrink="0"
               alignSelf="stretch"
@@ -503,7 +498,6 @@ export default function Features2x3(props) {
           >
             <Flex
               gap="24px"
-              direction="row"
               alignItems="flex-start"
               shrink="0"
               alignSelf="stretch"
@@ -611,7 +605,6 @@ export default function Features2x3(props) {
           >
             <Flex
               gap="24px"
-              direction="row"
               alignItems="flex-start"
               shrink="0"
               alignSelf="stretch"

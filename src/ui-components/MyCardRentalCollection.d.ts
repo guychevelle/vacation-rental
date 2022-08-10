@@ -6,15 +6,15 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { TallCardProps } from "./TallCard";
+import { MyCardProps } from "./MyCard";
 import { CollectionProps } from "@aws-amplify/ui-react";
-export declare type RentalCollectionProps = React.PropsWithChildren<Partial<CollectionProps<any>> & {
+export declare type MyCardRentalCollectionProps = React.PropsWithChildren<Partial<CollectionProps<any>> & {
     items?: any[];
     overrideItems?: (collectionItem: {
         item: any;
         index: number;
-    }) => TallCardProps;
+    }) => MyCardProps;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function RentalCollection(props: RentalCollectionProps): React.ReactElement;
+export default function MyCardRentalCollection(props: MyCardRentalCollectionProps): React.ReactElement;
