@@ -10,6 +10,7 @@ import { GalleryLogo } from './ui-components';
 import { GalleryLogoMobile } from './ui-components';
 
 import { MyCardRentalCollection } from './ui-components';
+import { ActionCardCollection } from './ui-components';
 
 //  hamburger menu
 import Sidebar from './Sidebar';
@@ -132,14 +133,23 @@ function AppLandingPage() {
   const mycardrentalCollOverrides = windowSize.innerWidth < 700
     ?  {
         "MyCardRentalCollection": {
-           type: "list"
+           type: "list",
+           justifyContent: "center"
          }
        }
     :  {
         "MyCardRentalCollection": {
-          type: "grid"
+          type: "grid",
+          templateColumns: "1fr 1fr 1fr"
          }
        }
+
+  const actioncardOverrides = {
+    "ActionCardCollection": {
+      type: "grid",
+      templateColumns: "1fr 1fr 1fr"
+    }
+  }
 
   return (
     <div>
@@ -151,7 +161,10 @@ function AppLandingPage() {
         </header>
         <div display="flex" justify-content="center" margin="25px">
           <Routes>
-            <Route path="/" element={<MyCardRentalCollection overrides={mycardrentalCollOverrides} />} />
+            <Route path="/" element={<MyCardRentalCollection overrides={mycardrentalCollOverrides} overrideItems={
+              ({ item, index }) => ({
+                backgroundColor: index %2 === 0 ? 'white' : 'lightgray'
+                })} />} />
           </Routes>
         </div>
       </BrowserRouter>
@@ -165,6 +178,12 @@ function AppLandingPage() {
 }
 
 /*
+          <Routes>
+            <Route path="/" element={<ActionCardCollection overrides={actioncardOverrides} overrideItems={
+              ({ item, index }) => ({
+                backgroundColor: index %2 === 0 ? 'white' : 'lightgray'
+                })} />} />
+          </Routes>
         <Routes>
           <Route path="/" element={<RentalCollection overrides={rentalCollOverrides} />} />
         </Routes>
@@ -173,7 +192,9 @@ function AppLandingPage() {
 function App() {
   return (
     <div>
+      <AmplifyProvider>
       { AppLandingPage() }
+      </AmplifyProvider>
     </div>
   );
 }
