@@ -13,24 +13,13 @@ export default function MyCard(props) {
   return (
     <View
       width="420px"
-      height="470px"
-      overflow="hidden"
+      height="500px"
       position="relative"
       padding="0px 0px 0px 0px"
       backgroundColor="rgba(255,255,255,1)"
       {...rest}
       {...getOverrideProps(overrides, "MyCard")}
     >
-      <View
-        width="420px"
-        height="43px"
-        position="absolute"
-        top="427px"
-        left="0px"
-        padding="0px 0px 0px 0px"
-        backgroundColor="rgba(255,255,255,1)"
-        {...getOverrideProps(overrides, "Rectangle 1")}
-      ></View>
       <Text
         fontFamily="Inter"
         fontSize="12px"
@@ -43,12 +32,12 @@ export default function MyCard(props) {
         width="107px"
         height="15px"
         position="absolute"
-        top="448px"
-        left="7px"
+        top="435px"
+        left="9px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children={`${"$"}${rentals?.price}${"/night"}`}
-        {...getOverrideProps(overrides, "Cost")}
+        children={rentals?.location}
+        {...getOverrideProps(overrides, "Caption")}
       ></Text>
       <Text
         fontFamily="Inter"
@@ -62,12 +51,12 @@ export default function MyCard(props) {
         width="107px"
         height="15px"
         position="absolute"
-        top="433px"
-        left="7px"
+        top="463px"
+        left="9px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children={rentals?.location}
-        {...getOverrideProps(overrides, "Caption")}
+        children={`${"$"}${rentals?.price}${"/night"}`}
+        {...getOverrideProps(overrides, "Cost")}
       ></Text>
       <Image
         width="420px"
