@@ -17,6 +17,13 @@ footer {
   cursor: pointer !important;
 }
 
+/*  center the rentalcollection component on the screen */
+.collectiondiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* collection styling overrides  */
 .collection-style-overrides {
   flex-wrap: wrap;

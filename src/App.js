@@ -140,7 +140,7 @@ function AppLandingPage() {
     :  {
         "MyCardRentalCollection": {
           type: "grid",
-          templateColumns: "1fr 1fr 1fr"
+          templateColumns: "1fr 1fr"
          }
        }
 
@@ -159,7 +159,7 @@ function AppLandingPage() {
         </div>
         <header>
         </header>
-        <div display="flex" justify-content="center" margin="25px">
+        <div className="collectiondiv"  margin="25px">
           <Routes>
             <Route path="/" element={<MyCardRentalCollection overrides={mycardrentalCollOverrides} overrideItems={
               ({ item, index }) => ({
