@@ -11,5 +11,18 @@
       "StackId": "arn:aws:cloudformation:us-east-1:159429861638:stack/amplify-vacationrental-staging-34517/701c9560-d401-11ec-8a43-0eaa0ad1cf2b",
       "AmplifyAppId": "d2org7cqyvge0r"
     }
+  },
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-vacationrental-prod-131608-authRole",
+      "UnauthRoleArn": "arn:aws:iam::159429861638:role/amplify-vacationrental-prod-131608-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::159429861638:role/amplify-vacationrental-prod-131608-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-vacationrental-prod-131608-deployment",
+      "UnauthRoleName": "amplify-vacationrental-prod-131608-unauthRole",
+      "StackName": "amplify-vacationrental-prod-131608",
+      "StackId": "arn:aws:cloudformation:us-east-1:159429861638:stack/amplify-vacationrental-prod-131608/8f3c5900-4033-11ed-a8df-12ce52a7dd0d",
+      "AmplifyAppId": "d2org7cqyvge0r"
+    }
   }
 }
