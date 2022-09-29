@@ -25,7 +25,6 @@ export default function FeaturesText2x2(props) {
     >
       <Flex
         gap="24px"
-        direction="row"
         alignItems="flex-start"
         shrink="0"
         alignSelf="stretch"
@@ -101,7 +100,6 @@ export default function FeaturesText2x2(props) {
         >
           <Flex
             gap="24px"
-            direction="row"
             alignItems="flex-start"
             shrink="0"
             alignSelf="stretch"
@@ -277,7 +275,6 @@ export default function FeaturesText2x2(props) {
           </Flex>
           <Flex
             gap="24px"
-            direction="row"
             alignItems="flex-start"
             shrink="0"
             alignSelf="stretch"

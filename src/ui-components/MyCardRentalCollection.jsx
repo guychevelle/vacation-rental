@@ -11,9 +11,9 @@ import {
   getOverrideProps,
   useDataStoreBinding,
 } from "@aws-amplify/ui-react/internal";
-import TallCard from "./TallCard";
+import MyCard from "./MyCard";
 import { Collection } from "@aws-amplify/ui-react";
-export default function RentalCollection(props) {
+export default function MyCardRentalCollection(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
   const itemsDataStore = useDataStoreBinding({
     type: "collection",
@@ -24,24 +24,21 @@ export default function RentalCollection(props) {
     <Collection
       type="grid"
       searchPlaceholder="Search..."
-      itemsPerPage={6}
       templateColumns="1fr 1fr"
       autoFlow="row"
       alignItems="stretch"
       justifyContent="stretch"
       items={items || []}
       {...rest}
-      {...getOverrideProps(overrides, "RentalCollection")}
+      {...getOverrideProps(overrides, "MyCardRentalCollection")}
     >
       {(item, index) => (
-        <TallCard
-          rental={item}
-          height="auto"
-          width="auto"
-          margin="0px 10px 0px 0px"
+        <MyCard
+          rentals={item}
+          margin="0 10px 10px 0"
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}
-        ></TallCard>
+        ></MyCard>
       )}
     </Collection>
   );

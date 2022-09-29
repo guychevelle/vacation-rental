@@ -17,6 +17,35 @@ footer {
   cursor: pointer !important;
 }
 
+/*  center the rentalcollection component on the screen */
+.collectiondiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* collection styling overrides  */
+.collection-style-overrides {
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 1px;
+}
+
+.collection-style-overrides .amplify-collection-items {
+  gap: 2px;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-style-overrides .amplify-grid {
+  align-items: center;
+}
+
+.collection-style-overrides .grid-template-colums {
+  align-items: center;
+}
+
+
 /* react-burger-menu specific styles */
 * {
   box-sizing: border-box;

@@ -12,7 +12,7 @@ export default function TallCard(props) {
   const { rental, overrides, ...rest } = props;
   return (
     <Flex
-      gap="8px"
+      gap="1px"
       direction="column"
       width="320px"
       justifyContent="center"
@@ -23,10 +23,9 @@ export default function TallCard(props) {
       {...getOverrideProps(overrides, "TallCard")}
     >
       <Image
+        width="320px"
         height="400px"
         shrink="0"
-        alignSelf="stretch"
-        objectFit="cover"
         position="relative"
         padding="0px 0px 0px 0px"
         src={rental?.image}
@@ -35,9 +34,8 @@ export default function TallCard(props) {
       <Flex
         gap="8px"
         direction="column"
+        width="320px"
         shrink="0"
-        alignSelf="stretch"
-        objectFit="cover"
         position="relative"
         padding="0px 8px 0px 8px"
         {...getOverrideProps(overrides, "Text Grouping")}
@@ -78,7 +76,7 @@ export default function TallCard(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children={`${'"$"'}${rental?.price}${'"/night"'}`}
+          children={`${"$"}${rental?.price}${"/night"}`}
           {...getOverrideProps(overrides, "$99")}
         ></Text>
       </Flex>

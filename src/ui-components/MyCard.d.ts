@@ -7,10 +7,10 @@
 import React from "react";
 import { Rental } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { FlexProps } from "@aws-amplify/ui-react";
-export declare type ActionCardProps = React.PropsWithChildren<Partial<FlexProps> & {
-    actionrentals?: Rental;
+import { ViewProps } from "@aws-amplify/ui-react";
+export declare type MyCardProps = React.PropsWithChildren<Partial<ViewProps> & {
+    rentals?: Rental;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function ActionCard(props: ActionCardProps): React.ReactElement;
+export default function MyCard(props: MyCardProps): React.ReactElement;

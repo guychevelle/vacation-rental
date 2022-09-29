@@ -1,13 +1,16 @@
 import './App.css';
 import './vacationrental.css';
 
-import { AmplifyProvider } from '@aws-amplify/ui-react'
-import '@aws-amplify/ui-react/styles.css'
+import { AmplifyProvider } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
 
 // UI Components
-import { RentalCollection } from './ui-components'
-import { GalleryLogo } from './ui-components'
-import { GalleryLogoMobile } from './ui-components'
+import { RentalCollection } from './ui-components';
+import { GalleryLogo } from './ui-components';
+import { GalleryLogoMobile } from './ui-components';
+
+import { MyCardRentalCollection } from './ui-components';
+import { ActionCardCollection } from './ui-components';
 
 //  hamburger menu
 import Sidebar from './Sidebar';
@@ -89,6 +92,7 @@ function BurgerLandingPage() {
   );
 }
 
+
 function AppLandingPage() {
   //  window size related functionality
   //  from https://bobbyhadz.com/blog/react-get-window-width-height
@@ -116,9 +120,34 @@ function AppLandingPage() {
   }
 //  end of determine window size functionality
 
+/*
   const rentalCollOverrides = {
     "RentalCollection": {
-      type: "list"
+      type: "grid",
+      columns: "2",
+      gap: "0px"
+    }
+  }
+*/
+
+  const mycardrentalCollOverrides = windowSize.innerWidth < 700
+    ?  {
+        "MyCardRentalCollection": {
+           type: "list",
+           justifyContent: "center"
+         }
+       }
+    :  {
+        "MyCardRentalCollection": {
+          type: "grid",
+          templateColumns: "1fr 1fr"
+         }
+       }
+
+  const actioncardOverrides = {
+    "ActionCardCollection": {
+      type: "grid",
+      templateColumns: "1fr 1fr 1fr"
     }
   }
 
@@ -130,9 +159,14 @@ function AppLandingPage() {
         </div>
         <header>
         </header>
-        <Routes>
-          <Route path="/" element={<RentalCollection overrides={rentalCollOverrides} />} />
-        </Routes>
+        <div className="collectiondiv"  margin="25px">
+          <Routes>
+            <Route path="/" element={<MyCardRentalCollection overrides={mycardrentalCollOverrides} overrideItems={
+              ({ item, index }) => ({
+                backgroundColor: index %2 === 0 ? 'white' : 'lightgray'
+                })} />} />
+          </Routes>
+        </div>
       </BrowserRouter>
       <footer>
         <div className="centered">
@@ -143,10 +177,24 @@ function AppLandingPage() {
   );
 }
 
+/*
+          <Routes>
+            <Route path="/" element={<ActionCardCollection overrides={actioncardOverrides} overrideItems={
+              ({ item, index }) => ({
+                backgroundColor: index %2 === 0 ? 'white' : 'lightgray'
+                })} />} />
+          </Routes>
+        <Routes>
+          <Route path="/" element={<RentalCollection overrides={rentalCollOverrides} />} />
+        </Routes>
+*/
+
 function App() {
   return (
     <div>
+      <AmplifyProvider>
       { AppLandingPage() }
+      </AmplifyProvider>
     </div>
   );
 }

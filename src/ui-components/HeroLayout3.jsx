@@ -117,7 +117,6 @@ export default function HeroLayout3(props) {
         <Button
           display="flex"
           gap="0"
-          direction="row"
           width="fit-content"
           justifyContent="center"
           alignItems="center"
