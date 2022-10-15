@@ -103,6 +103,8 @@ function AppLandingPage() {
     document.title = "Gallery: Vacation Rentals";
     document.querySelector('meta[name="description"]').setAttribute("content", "Collection of image cards with descriptions");
     document.querySelector('meta[name="keywords"]').setAttribute("content", "react aws amplify");
+    // set 'viewpport' to tell browser how to control page dimensions and scaling
+    document.querySelector('meta[name="viewport"]').setAttribute("content", "width=device-width, initial-scale=1.0");
 
     function handleWindowResize() {
       setWindowSize(getWindowSize());
