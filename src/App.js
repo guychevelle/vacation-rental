@@ -163,7 +163,8 @@ function AppLandingPage() {
           <Routes>
             <Route path="/" element={<MyCardRentalCollection overrides={mycardrentalCollOverrides} overrideItems={
               ({ item, index }) => ({
-                backgroundColor: index %2 === 0 ? 'white' : 'lightgray'
+                backgroundColor: index %2 === 0 ? 'white' : 'lightgray',
+                width: '350px'
                 })} />} />
           </Routes>
         </div>
