@@ -23,6 +23,7 @@ export default function MyNested(props) {
       <Flex
         gap="10px"
         direction="column"
+        width="fit-content"
         shrink="0"
         position="relative"
         padding="10px 10px 10px 10px"

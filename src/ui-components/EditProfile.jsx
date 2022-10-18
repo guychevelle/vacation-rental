@@ -122,7 +122,7 @@ export default function EditProfile(props) {
             height="96px"
             shrink="0"
             position="relative"
-            borderRadius="160px"
+            borderRadius="48px"
             padding="0px 0px 0px 0px"
             {...getOverrideProps(overrides, "image")}
           ></Image>
